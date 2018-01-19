@@ -4,11 +4,22 @@ describe('Bubble Sort', function(){
   });
   var testArr = [3,6,4];
 
-  beforeEach(function() {
-  });
-  it('bubblesort returs sorted array', function () {
+  // beforeEach(function() {
+  // });
+  it('bubblesort returns sorted array', function () {
     expect(bubbleSort(testArr)).toBe([3,4,6]);
   });
+
+
+  var arr = [3,6,4,1,8,7,2,11]
+  var sortArr = bubbleSort(arr);
+  spyOn(sortArr, "swap");
+  sortArr();
+  expect(sortArr.swap).toHaveBeenCalled();
+
+  it("should use the `swap` method", function(){
+  });
+
 
 });
 // describe('Bubble Sort', function(){
@@ -22,6 +33,7 @@ describe('Bubble Sort', function(){
 //   beforeEach(function(){
 
 //   });
+
 
 
 //   it('palindrome is a function', function() {

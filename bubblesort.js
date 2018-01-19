@@ -1,22 +1,25 @@
-function bubbleSort(array){
+function swap(array, firstNumIdx, secondNumIdx) {
+  var temp = array[firstNumIdx];
+  array[firstNumIdx] = array[secondNumIdx];
+  array[secondNumIdx] = temp;
+}
+function bubbleSort(array) {
 
-  var numComparisons = 0
-  var swapCounter = 0
+  var numComparison = 0;
+  var countSwap = 0;
 
-  for(var i = 0; i < array.lenght;i++){
+  for(var i = 0; i < array.length; i++) {
+
+    for(var j = 1; j < array.length; j++) {
+      numComparison++;
+      if(array[j - 1] > array[j]) {
+        countSwap++;
+        swap(array, j - 1, j);
+      }
+    }
 
   }
 
-  var sortedArr = []
-
-
-
-
-  return sortedArr
-}
-
-function swap(num1, num2){
-
-  return arr
-
+  console.log('comparisons:', numComparison, 'swap:', countSwap, 'result:',array);
+  return array;
 }
