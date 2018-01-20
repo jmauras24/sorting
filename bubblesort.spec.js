@@ -8,7 +8,7 @@ describe('Bubble Sort', function(){
   //   spyOn(testArr, 'swap');
   // });
   it('handles an empty array', function(){
-    expect(bubbleSort([]) ).toEqual( [] );
+    expect(bubbleSort([])).toEqual([]);
   });
   it('return two numbers of an array', function () {
     expect(bubbleSort(testArr)).toEqual([3, 6]);
